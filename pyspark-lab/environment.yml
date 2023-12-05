@@ -1,0 +1,9 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlab_execute_time
+  - plotly
+  - lightgbm 
+  - yellowbrick
+  - xgboost

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+CWD=$(cd $(dirname $0) && pwd)
+TARGET=$1
+# MOUNT_PATH is $2 or $CWD/$TARGET/work absolute path
+MOUNT_PATH=${2:-$CWD/$TARGET/work}
+ABSOLUTE_MOUNT_PATH=$(cd $MOUNT_PATH && pwd)
+
+cd $TARGET
+docker build -t $TARGET:latest .
+docker stop $TARGET || true
+docker rm $TARGET || true
+docker run -d \
+    --restart unless-stopped \
+    --name $TARGET \
+    -p 18888:8888 \
+    -v $ABSOLUTE_MOUNT_PATH:/home/jovyan/work/ \
+    $TARGET:latest
+
+cd $CWD

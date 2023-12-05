@@ -1,0 +1,45 @@
+{
+    "@jupyterlab/apputils-extension:themes": {
+        "theme": "JupyterLab Dark",
+        "theme-scrollbars": true
+    },
+    "@jupyterlab/notebook-extension:tracker": {
+        "defaultCell": "code",
+        "autoStartDefaultKernel": false,
+        "inputHistoryScope": "global",
+        "kernelShutdown": false,
+        "scrollPastEnd": true,
+        "recordTiming": true,
+        "overscanCount": 1,
+        "maxNumberOutputs": 50,
+        "showEditorForReadOnlyMarkdown": true,
+        "kernelStatus": {
+            "showOnStatusBar": false,
+            "showProgress": true
+        },
+        "documentWideUndoRedo": false,
+        "showHiddenCellsButton": true,
+        "renderingLayout": "default",
+        "sideBySideLeftMarginOverride": "10px",
+        "sideBySideRightMarginOverride": "10px",
+        "sideBySideOutputRatio": 1,
+        "windowingMode": "defer",
+        "codeCellConfig": {
+            "autoClosingBrackets": true,
+            "codeFolding": false,
+            "lineNumbers": true,
+            "lineWrap": false
+        },
+        "markdownCellConfig": {
+            "autoClosingBrackets": true,
+            "matchBrackets": true,
+            "lineNumbers": false,
+            "lineWrap": true
+        },
+        "rawCellConfig": {
+            "lineNumbers": false,
+            "matchBrackets": false,
+            "lineWrap": false
+        }
+    }
+}
